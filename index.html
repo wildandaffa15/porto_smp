@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porto SMKN1BWI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .carousel {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel img {
+      min-width: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .carousel-button {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 3.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .fade-in-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  </style>
+</head>
+<body class="scroll-smooth">
+
+  <!-- Topbar -->
+  <nav class="mt-2">
+    <div class="container mx-auto flex justify-between items-center">
+
+      <!-- Content left -->
+      <div class="hidden md:flex space-x-4">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-envelope text-green-500"></i>
+          <a class="text-gray-500 hover:text-green-500" href="">smpn1giri@gmail.com</a>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-phone-alt text-green-500"></i>
+          <span class="text-gray-500 hover:text-green-500">085233992803</span>
+        </div>
+      </div>
+      
+      <!-- Content right -->
+      <div class="hidden md:flex space-x-4">
+        <a href="https://www.youtube.com" target="_blank" class="text-green-500 hover:text-gray-400">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="text-green-500 hover:text-gray-400">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="text-green-500 hover:text-gray-400">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Navbar -->
+  <nav class="p-4 mt-3">
+    <div class="container mx-auto flex justify-between items-center">
+
+      <!-- Logo -->
+      <img class="w-16" src="img/logo.png" alt="">
+      <div class="relative mr-auto ml-3">
+        <span class="text-gray-500 hover:text-green-500 font-semibold text-2xl">SMP NEGERI 1 GIRI</span>
+      </div>
+      
+      <!-- Menu -->
+      <div class="hidden md:flex space-x-4 gap-4">
+        <a href="#" class="text-gray-500 text-lg font-medium hover:text-green-500">Beranda</a>
+        <a href="#" class="text-gray-500 text-lg font-medium hover:text-green-500">Kelas</a>
+        <a href="#" class="text-gray-500 text-lg font-medium hover:text-green-500">Perpustakan</a>
+        <a href="#" class="text-gray-500 text-lg font-medium hover:text-green-500">Ujian Online</a>
+        <a href="#" class="text-gray-500 text-lg font-medium hover:text-green-500">Jurnal Mengajar</a>
+        <a href="#" class="text-gray-500 text-lg font-medium hover:text-green-500">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Images -->
+  <section class="mt-8">
+    <div class="container mx-auto">
+      <div class="carousel relative w-3/4 h-96 mx-auto">
+        <img src="img/head.jpeg" class="object-cover object-center">
+        <img src="img/head.jpeg" class="object-cover object-center">
+        <img src="img/head.jpeg" class="object-cover object-center">
+        <div class="carousel-buttons">
+          <button class="carousel-button" id="prevBtn">&#10094;</button>
+          <button class="carousel-button" id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content portal -->
+  <div class="w-full max-w-screen-xl mx-auto flex justify-center flex-col items-center mt-28">
+    <div class="text-4xl font-medium">
+      <a><span>Fitur </span><span class="text-green-500">Kami</span></a>
+    </div>
+    <span class="font-medium mt-2">Fitur-Fitur yang ada di sekolah Smpn 1 Giri</span>
+
+    <!-- card -->
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-20 mt-8">
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f1.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+      </div>
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f2.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+      </div>
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f3.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+      </div>
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f4.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+      </div>
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f5.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+        <i class="fab clock"></i>
+      </div>
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f6.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+      </div>
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f7.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+      </div>
+      <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+        <img class="mb-3" src="img/f8.png" alt="">
+        <p class="font-semibold text-sm mb-2">Lorem ipsum dolor, sit amet consectetur</p>
+      </div>
+     </div>
+
+  <!-- Content Berita -->
+   <div class="w-full max-w-screen-xl mx-auto flex justify-center flex-col items-center mt-24">
+    <div class="text-4xl font-medium">
+      <a><span>Berita </span><span class="text-green-500">Terkini</span></a>
+    </div>
+    <span class="font-medium mt-2">Berita terkini tentang kegiatan sekolah yang ada di Smpn 1 Giri</span>
+   </div>
+
+   <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-20 mt-8">
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+    </div>
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+    </div>
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+    </div>
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+    </div>
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+      <i class="fab clock"></i>
+    </div>
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+    </div>
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+    </div>
+    <div class="card bg-gray-100 p-6 rounded-2xl shadow-2xl fade-in-up">
+      <img class="mb-3" src="img/b1.png" alt="">
+      <p class="font-semibold text-sm mb-2">Studi vokasi dari Smkn 1 Glagah</p>
+      <i class="fa-regular fa-clock text-base"></i>
+      <span class="text-sm font-semibold mb-2">16-05-2024</span>
+      <div class="text-sm font-semibold hover:text-green-500 mt-2">
+        <a href="">Buka</a>
+      </div>
+    </div>
+   </div>
+
+   <!-- footer -->
+   <div class="w-full max-w-screen-xl mx-auto flex justify-between items-center py-10">
+    <div class="w-1/2 ">
+        <h1 class="text-green-500 text-lg">©Copyright 2024 - Smp Negeri 1 Giri</h1>
+    </div>
+    <div class="w-1/2 flex items-center justify-end gap-5">
+      <a href="https://www.instagram.com" target="_blank" class="text-green-500 hover:text-gray-400 text-2xl">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com" target="_blank" class="text-green-500 hover:text-gray-400 text-2xl">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.facebook.com" target="_blank" class="text-green-500 hover:text-gray-400 text-2xl">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+   </div>
+   
+
+
+  
+  <script src="index.js"></script>
+  
+</body>
+</html>
